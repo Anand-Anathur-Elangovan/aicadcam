@@ -1,0 +1,54 @@
+{
+  "location": "us-east4",
+  "log_level": "DEBUG",
+  "agent_framework": "google-adk",
+  "identity_type": "AGENT_IDENTITY",
+  "api_version": "v1",
+  "labels": {
+    "bu": "tsgi",
+    "version": "v1_0",
+    "usecase": "poc_agentic_app",
+    "code_repo": "gitlab_verizon_com",
+    "agent_pattern": "single_agent",
+    "agent_tier": "tier1"
+  },
+  "psc_network_attachment": "projects/vz-it-np-exhv-sharedvpc-228116/regions/us-east4/networkAttachments/shared-np-east-agent-engine-voev",
+  "required_no_proxy_hosts": [
+    "metadata.google.internal",
+    "metadata",
+    "169.254.169.254",
+    "googleapis.com",
+    "google.internal",
+    "mtls.googleapis.com",
+    "aiplatform.googleapis.com"
+  ],
+  "container_image": "us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/adk-pyvegas-base@sha256:dbb9fff96715b8385676d948823943aa553a9dfc73f86bd80036bb718944ada1",
+  "dns_peering_configs": [
+    {
+      "domain": "agentengine.internal.",
+      "target_project": "vz-it-np-exhv-sharedvpc-228116",
+      "target_network": "shared-np-east"
+    }
+  ],
+  "memory_bank": {
+    "_comment": "mode: disabled | decoupled | agent_runtime",
+    "mode": "agent_runtime",
+    "idle_trigger_seconds": 300,
+    "top_k": 5
+  },
+  "agents": {
+    "gmeet_score_agent": {
+      "display_name": "gmeet-score-agent",
+      "description": "Verizon GMeet Quality Score Agent",
+      "min_instances": 1,
+      "max_instances": 1,
+      "cpu": "2",
+      "memory": "5Gi",
+      "container_concurrency": 2,
+      "num_workers": 2,
+      "otel_service_name": "gmeet-score-agent",
+      "entrypoint_module": "app.agent",
+      "entrypoint_object": "app"
+    }
+  }
+}

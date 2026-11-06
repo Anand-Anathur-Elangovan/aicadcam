@@ -1,0 +1,11 @@
+.env
+service-account-key.json
+oidc_token.json
+*.json.key
+agent_runtime_metadata.json
+__pycache__/
+.venv/
+.adk/
+uv.lock
+*.pyc
+.DS_Store

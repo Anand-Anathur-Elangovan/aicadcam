@@ -1,0 +1,54 @@
+{
+  "location": "us-east4",
+  "log_level": "DEBUG",
+  "agent_framework": "google-adk",
+  "identity_type": "AGENT_IDENTITY",
+  "api_version": "v1",
+  "labels": {
+    "bu": "tsgi",
+    "version": "v1_0",
+    "usecase": "poc_agentic_app",
+    "code_repo": "gitlab_verizon_com",
+    "agent_pattern": "single_agent",
+    "agent_tier": "tier1"
+  },
+  "psc_network_attachment": "projects/vz-it-np-exhv-sharedvpc-228116/regions/us-east4/networkAttachments/shared-np-east-agent-engine-voev",
+  "required_no_proxy_hosts": [
+    "metadata.google.internal",
+    "metadata",
+    "169.254.169.254",
+    "googleapis.com",
+    "google.internal",
+    "mtls.googleapis.com",
+    "aiplatform.googleapis.com"
+  ],
+  "container_image": "us-east4-docker.pkg.dev/vz-it-np-voev-dev-voevdo-0/development-artifact/eqesmainagent@sha256:710dfca90e7be8ff8ff36132b807c69909578d0d8ddcaada2b9bc2970244fd83",
+  "dns_peering_configs": [
+    {
+      "domain": "agentengine.internal.",
+      "target_project": "vz-it-np-exhv-sharedvpc-228116",
+      "target_network": "shared-np-east"
+    }
+  ],
+  "memory_bank": {
+    "_comment": "mode: disabled | decoupled | agent_runtime",
+    "mode": "agent_runtime",
+    "idle_trigger_seconds": 300,
+    "top_k": 5
+  },
+  "agents": {
+    "eqes_orchestrator": {
+      "display_name": "eqes-main-agent",
+      "description": "EQES Main Assistant",
+      "min_instances": 1,
+      "max_instances": 1,
+      "cpu": "2",
+      "memory": "5Gi",
+      "container_concurrency": 2,
+      "num_workers": 2,
+      "otel_service_name": "eqes-main-agent",
+      "entrypoint_module": "app.agent",
+      "entrypoint_object": "app"
+    }
+  }
+}

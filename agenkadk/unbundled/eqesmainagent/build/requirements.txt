@@ -1,0 +1,10 @@
+google-adk[gcp]==2.3.0
+opentelemetry-instrumentation-google-genai>=0.1.0,<1.0.0
+gcsfs>=2024.11.0
+google-cloud-logging>=3.12.0,<4.0.0
+google-cloud-aiplatform[agent-engines]>=1.156.0
+protobuf>=6.31.1,<7.0.0
+nest-asyncio>=1.6.0
+python-dotenv>=1.0.0
+requests>=2.32.0
+google-auth>=2.29.0

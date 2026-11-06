@@ -1,0 +1,230 @@
+{
+    "original_file_name": "aicam.txt",
+    "original_file_size_bytes": 2607791,
+    "sha256": "8296d8e7b0878f6bc48d132d9ac817547a25cdfe6b02d2aad42e94aaecceef86",
+    "encoding": "hex",
+    "total_splits": 44,
+    "split_files": [
+      {
+        "part": 1,
+        "filename": "split_0001.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 2,
+        "filename": "split_0002.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 3,
+        "filename": "split_0003.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 4,
+        "filename": "split_0004.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 5,
+        "filename": "split_0005.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 6,
+        "filename": "split_0006.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 7,
+        "filename": "split_0007.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 8,
+        "filename": "split_0008.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 9,
+        "filename": "split_0009.json",
+        "size_bytes": 120123
+      },
+      {
+        "part": 10,
+        "filename": "split_0010.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 11,
+        "filename": "split_0011.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 12,
+        "filename": "split_0012.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 13,
+        "filename": "split_0013.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 14,
+        "filename": "split_0014.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 15,
+        "filename": "split_0015.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 16,
+        "filename": "split_0016.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 17,
+        "filename": "split_0017.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 18,
+        "filename": "split_0018.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 19,
+        "filename": "split_0019.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 20,
+        "filename": "split_0020.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 21,
+        "filename": "split_0021.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 22,
+        "filename": "split_0022.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 23,
+        "filename": "split_0023.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 24,
+        "filename": "split_0024.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 25,
+        "filename": "split_0025.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 26,
+        "filename": "split_0026.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 27,
+        "filename": "split_0027.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 28,
+        "filename": "split_0028.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 29,
+        "filename": "split_0029.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 30,
+        "filename": "split_0030.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 31,
+        "filename": "split_0031.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 32,
+        "filename": "split_0032.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 33,
+        "filename": "split_0033.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 34,
+        "filename": "split_0034.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 35,
+        "filename": "split_0035.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 36,
+        "filename": "split_0036.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 37,
+        "filename": "split_0037.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 38,
+        "filename": "split_0038.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 39,
+        "filename": "split_0039.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 40,
+        "filename": "split_0040.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 41,
+        "filename": "split_0041.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 42,
+        "filename": "split_0042.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 43,
+        "filename": "split_0043.json",
+        "size_bytes": 120124
+      },
+      {
+        "part": 44,
+        "filename": "split_0044.json",
+        "size_bytes": 55706
+      }
+    ],
+    "reconstruction": "join every part's 'data' in order, then bytes.fromhex(joined) -> aicam.txt; then unbundle (each entry in aicam.txt has path, size and sha256)"
+  }

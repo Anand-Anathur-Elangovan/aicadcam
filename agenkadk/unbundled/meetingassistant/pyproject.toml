@@ -1,0 +1,45 @@
+[project]
+name = "meetingassistant"
+version = "0.1.0"
+description = "Verizon Meeting AI Assistant — Join meetings, transcribe, auto-respond, summarize"
+authors = [
+    {name = "Verizon VOEV", email = "do-not-reply@verizon.com"},
+]
+
+dependencies = [
+    "google-adk[gcp]==2.3.0",
+    "opentelemetry-instrumentation-google-genai>=0.1.0,<1.0.0",
+    "gcsfs>=2024.11.0",
+    "google-cloud-logging>=3.12.0,<4.0.0",
+    "google-cloud-aiplatform[agent-engines,evaluation]>=1.156.0",
+    "google-cloud-speech>=2.27.0",
+    "google-cloud-texttospeech>=2.17.0",
+    "google-apps-meet>=0.1.0",
+    "aiortc>=1.9.0",
+    "av>=12.0.0",
+    "numpy>=1.26.0",
+    "protobuf>=6.31.1,<7.0.0",
+    "slack-sdk>=3.27.0",
+    "requests>=2.32.0",
+    "playwright>=1.45.0",
+    "nest-asyncio>=1.6.0",
+    "python-dotenv>=1.0.0",
+]
+requires-python = ">=3.11,<3.14"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2,<10.0.0",
+    "pytest-asyncio>=1.0.0,<2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+asyncio_default_fixture_loop_scope = "function"

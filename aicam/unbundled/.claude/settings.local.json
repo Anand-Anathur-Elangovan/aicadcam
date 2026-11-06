@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest *)",
+      "Bash(npm cache *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(npx next *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Next:', d['dependencies'].get\\('next','?'\\), '| React:', d['dependencies'].get\\('react','?'\\)\\)\")",
+      "Bash(node -e \"require\\('three'\\); console.log\\('three OK'\\)\")",
+      "Bash(node -e \"require\\('monaco-editor/package.json'\\); console.log\\('monaco OK'\\)\")",
+      "Bash(npx --yes tsc --noEmit)",
+      "Bash(node -e \"const p = require.resolve\\('pdfjs-dist'\\); console.log\\(p\\)\")",
+      "Bash(node *)",
+      "Bash(chmod +x /Users/ANATAN8/Desktop/project/aicadcam/deploy-onprem.sh)",
+      "Bash(chmod +x /Users/ANATAN8/Desktop/project/aicadcam/scripts/train_lora.py)",
+      "Bash(chmod +x /Users/ANATAN8/Desktop/project/aicadcam/scripts/export_dataset.py)",
+      "Bash(sudo npm *)",
+      "Bash(wait)",
+      "Bash(npx vitest *)"
+    ]
+  }
+}

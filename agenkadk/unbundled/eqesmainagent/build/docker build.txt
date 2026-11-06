@@ -1,0 +1,21 @@
+podman login -u us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent
+or
+podman login -u oauth2accesstoken  -p <<print-access-token>> us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent
+
+
+
+podman build \
+--platform linux/amd64 \
+-f ./build/Dockerfile \
+-t us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent:latest \
+-t us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent:1.0 \
+.
+
+
+
+podman push us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent:latest
+podman push us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent:1.0
+
+
+
+podman tag us-region4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/agent-repo/eqesmainagent:1.0 us-east4-docker.pkg.dev/vz-it-np-k54v-dev-agbupc-0/vz-k54v-agentengine-repo/eqesmainagent:1.1
